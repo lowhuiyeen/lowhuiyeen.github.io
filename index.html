@@ -3,40 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Low Hui Yeen - Biomedical Engineer and Electrical Engineering Researcher at UTM">
+    <title>Low Hui Yeen | Biomedical & Electrical Engineering Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="assets/images/LowHuiYeenProfile.jpg">
+    <script src="assets/js/include.js" defer></script>
+    <style>
+        /* Keep your CSS here as before (unchanged) */
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Your content here...</p>
+    <!-- Reusable Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <img src="assets/images/LowHuiYeenProfile.jpg" alt="Low Hui Yeen" class="profile-img">
+            <h1>Low Hui Yeen</h1>
+            <p>Biomedical Engineering Graduate | Master's Researcher in Electrical Engineering</p>
+            <p><i class="fas fa-map-marker-alt"></i> Universiti Teknologi Malaysia, Johor Bahru</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/lowhuiyeen" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:YOUR.EMAIL@utm.my" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank" title="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section>
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                Hello! I'm Low Hui Yeen, a dedicated researcher currently pursuing my <strong>Master's by Research in 
+                Electrical Engineering (Full-Time)</strong> at <strong>Universiti Teknologi Malaysia (UTM)</strong>. 
+                I graduated with a <strong>Bachelor of Biomedical Engineering with Honours</strong> in October 2025, 
+                achieving a CGPA of <strong>3.80/4.0</strong>.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 1rem;">
+                My interdisciplinary background bridges biomedical and electrical engineering, enabling me to approach 
+                complex problems with a unique perspective. I am passionate about research that drives innovation 
+                and contributes to advancing both engineering fields.
+            </p>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>3.80</h3>
+                    <p>CGPA</p>
+                </div>
+                <div class="stat-box">
+                    <h3>2+</h3>
+                    <p>Years Research</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Full-Time</h3>
+                    <p>Master's Student</p>
+                </div>
+            </div>
         </section>
-        
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>Your projects here...</p>
+
+        <!-- Quick Links -->
+        <section>
+            <h2><i class="fas fa-link"></i> Quick Access</h2>
+            <div class="quick-links">
+                <a href="education.html" class="link-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>Academic Background & Achievements</p>
+                </a>
+                <a href="research.html" class="link-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Research</h3>
+                    <p>Current & Past Research Projects</p>
+                </a>
+                <a href="projects.html" class="link-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Projects</h3>
+                    <p>Academic & Personal Projects</p>
+                </a>
+                <a href="publications.html" class="link-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Publications</h3>
+                    <p>Papers & Conference Proceedings</p>
+                </a>
+                <a href="resume.html" class="link-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Resume</h3>
+                    <p>Download My CV</p>
+                </a>
+                <a href="contact.html" class="link-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Contact</h3>
+                    <p>Get in Touch</p>
+                </a>
+            </div>
         </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch...</p>
+
+        <!-- Education Highlights -->
+        <section>
+            <h2><i class="fas fa-university"></i> Education Highlights</h2>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <h3>Current Studies</h3>
+                    <div class="degree">Master by Research in Electrical Engineering</div>
+                    <p><strong>Universiti Teknologi Malaysia (UTM)</strong></p>
+                    <p>Full-Time | 2025 – Present</p>
+                    <p style="margin-top: 1rem;">Focusing on biomedical instrumentation, signal processing, and innovative healthcare technology.</p>
+                </div>
+                <div class="highlight-item">
+                    <h3>Undergraduate Degree</h3>
+                    <div class="degree">Bachelor of Biomedical Engineering with Honours</div>
+                    <p><strong>Universiti Teknologi Malaysia (UTM)</strong></p>
+                    <div class="cgpa">CGPA: 3.80/4.0</div>
+                    <p style="margin-top: 1rem;">Graduated October 2025</p>
+                    <p>Developed strong foundations in biomedical engineering with hands-on experience in medical devices and computational modeling.</p>
+                </div>
+            </div>
         </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+
+        <!-- Research Interests -->
+        <section>
+            <h2><i class="fas fa-lightbulb"></i> Research Interests</h2>
+            <div class="skills-tags">
+                <span class="tag">Biomedical Engineering</span>
+                <span class="tag">Electrical Engineering</span>
+                <span class="tag">Signal Processing</span>
+                <span class="tag">Medical Devices</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Biomechanics</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Clinical Engineering</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- Reusable Footer -->
+    <div id="footer"></div>
 </body>
 </html>
