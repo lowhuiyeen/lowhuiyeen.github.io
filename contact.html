@@ -7,11 +7,26 @@
     <title>Contact | Low Hui Yeen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/include.js" defer></script>
 </head>
 <body>
-    <!-- Reusable Header -->
-    <div id="header"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Low Hui Yeen</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     <div class="container">
@@ -27,25 +42,23 @@
                 <div class="card text-center">
                     <i class="fas fa-envelope" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
                     <h3>Email</h3>
-                    <p><a href="mailto:lowhuiyeen@gmail.com">lowhuiyeen@gmail.com</a></p>
+                    <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    <!-- TODO: Update with your actual email -->
                 </div>
 
                 <!-- LinkedIn -->
                 <div class="card text-center">
                     <i class="fab fa-linkedin" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
                     <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/huiyeenlow/" target="_blank" rel="noopener noreferrer">
-                        linkedin.com/in/huiyeenlow
-                    </a></p>
+                    <p><a href="https://linkedin.com/in/yourprofile" target="_blank">Connect on LinkedIn</a></p>
+                    <!-- TODO: Update with your LinkedIn profile -->
                 </div>
 
                 <!-- GitHub -->
                 <div class="card text-center">
                     <i class="fab fa-github" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
                     <h3>GitHub</h3>
-                    <p><a href="https://github.com/lowhuiyeen" target="_blank" rel="noopener noreferrer">
-                        github.com/lowhuiyeen
-                    </a></p>
+                    <p><a href="https://github.com/lowhuiyeen" target="_blank">@lowhuiyeen</a></p>
                 </div>
 
                 <!-- Location -->
@@ -60,7 +73,7 @@
         <section>
             <h2><i class="fas fa-paper-plane"></i> Send a Message</h2>
             
-            <!-- Note: Configure with Formspree, Netlify Forms, or Google Forms -->
+            <!-- TODO: You can integrate a form service like Formspree, Google Forms, or Netlify Forms -->
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="name">Name *</label>
@@ -88,7 +101,7 @@
             </form>
 
             <p class="mt-2" style="color: #666; font-size: 0.9rem;">
-                <em>Note: Form functionality needs to be configured.</em>
+                <em>Note: Form functionality needs to be configured. See comments in HTML for options.</em>
             </p>
         </section>
 
@@ -96,23 +109,28 @@
             <h2><i class="fas fa-link"></i> Connect on Social Media</h2>
             
             <div style="text-align: center; font-size: 2rem;">
-                <a href="https://github.com/lowhuiyeen" target="_blank" rel="noopener noreferrer" style="margin: 0 1rem; color: var(--primary-color);">
+                <!-- TODO: Add your social media links -->
+                <a href="https://github.com/lowhuiyeen" target="_blank" style="margin: 0 1rem; color: var(--primary-color);">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/huiyeenlow/" target="_blank" rel="noopener noreferrer" style="margin: 0 1rem; color: var(--primary-color);">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" style="margin: 0 1rem; color: var(--primary-color);">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:lowhuiyeen@gmail.com" style="margin: 0 1rem; color: var(--primary-color);">
+                <a href="mailto:your.email@example.com" style="margin: 0 1rem; color: var(--primary-color);">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" style="margin: 0 1rem; color: var(--primary-color);">
+                <a href="https://scholar.google.com" target="_blank" style="margin: 0 1rem; color: var(--primary-color);">
                     <i class="fas fa-graduation-cap"></i>
                 </a>
+                <!-- Add more social media links as needed -->
             </div>
         </section>
     </div>
 
-    <!-- Reusable Footer -->
-    <div id="footer"></div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Low Hui Yeen. All Rights Reserved.</p>
+        <p>Built with passion for engineering research and innovation</p>
+    </footer>
 </body>
 </html>
