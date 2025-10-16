@@ -30,47 +30,6 @@ img { max-width: 100%; display: block; }
 .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
 
 /* ======= NAVBAR ======= */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px) saturate(180%);
-  border-bottom: 1px solid rgba(230, 235, 245, 0.7);
-  box-shadow: 0 2px 8px rgba(30, 40, 60, 0.05);
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 10px 28px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  color: var(--primary);
-  font-size: 18px;
-}
-
-.brand-logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #eaeff6;
-}
-
-.nav-links {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
 .nav-links a {
   position: relative;
   color: var(--muted);
@@ -82,16 +41,19 @@ nav {
 
 .nav-links a:hover {
   color: var(--primary);
-  background: rgba(52, 152, 219, 0.1);
+  background: rgba(52, 152, 219, 0.08);
 }
 
+/* Active state now persistent and more visible */
 .nav-links a.active {
-  color: #fff;
   background: var(--accent);
-  box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(52, 152, 219, 0.25);
+  border-bottom: 2px solid #2c82c9;
 }
 
-/* subtle underline effect */
+/* Keep the underline effect consistent */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -105,6 +67,12 @@ nav {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
+}
+
+/* Smooth focus for keyboard navigation */
+.nav-links a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
 /* ======= HERO ======= */
@@ -156,7 +124,7 @@ nav {
   font-size: 14px;
 }
 
-/* ======= TOGGLE BUTTON ======= */
+/* ======= TOGGLE BUTTON (Spacing + Style Polish) ======= */
 #toggle-pic {
   display: inline-flex;
   align-items: center;
@@ -165,16 +133,17 @@ nav {
   color: #fff;
   border: none;
   cursor: pointer;
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 14px;
   transition: all 0.25s ease;
   box-shadow: 0 4px 10px rgba(231, 76, 60, 0.25);
+  margin-top: 14px;   /* 💡 adds vertical breathing space below badges */
 }
 
 #toggle-pic::before {
-  content: "📸"; /* or 🔁 — optional */
+  content: "📸";
   font-size: 15px;
 }
 
