@@ -3,114 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Low Hui Yeen — researcher & tutor">
-  <title>Home | Low Hui Yeen</title>
+  <title>Low Hui Yeen | Portfolio</title>
+  <meta name="description" content="Portfolio of Low Hui Yeen — Researcher & STEM Tutor">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+  <!-- Header placeholder (auto-loaded from header.html) -->
   <header id="site-header"></header>
-  
-<section class="hero">
-  <div class="hero-inner">
-  <img
-    id="profile-pic"
-    src="assets/images/LowHuiYeenProfile.jpg"
-    data-alt="assets/images/LowHuiYeenAlt.jpg"
-    alt="Low Hui Yeen"
-  />
-    <div>
-      <h1>Low Hui Yeen</h1>
-      <p>Master's by Research (Electrical Engineering), UTM • BME (Hons) CGPA 3.80 • STEM & Coding Tutor</p>
-      <div class="badges">
-        <span class="badge">UTM Faculty of Electrical Engineering</span>
-        <span class="badge">Genius Code Plus — Tutor</span>
-        <span class="badge">Python • Roblox • Minecraft Education</span>
-      </div>
-      <button id="toggle-pic">Toggle Photo</button>
-    </div>
-  </div>
-</section>
 
-<main class="container">
-  <section>
-    <h2>Overview</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Education</h3>
-        <p><strong>Bachelor of Biomedical Engineering (Hons)</strong><br>Universiti Teknologi Malaysia (UTM)<br>11 Oct 2021 – 27 Aug 2025 • CGPA 3.80/4.00</p>
-        <p><strong>Master by Research — Electrical Engineering</strong><br>UTM Faculty of Electrical Engineering • Present</p>
-        <a class="cta" href="education.html">View details →</a>
-      </div>
-      <div class="card">
-        <h3>Experience</h3>
-        <p><strong>Tutor (STEM & Coding)</strong> — Genius Code Plus<br>Sep 2025 – Present</p>
-        <p>Teaching primary & secondary: Python, Roblox Studio, Minecraft Education.</p>
-        <a class="cta" href="experience.html">See experience →</a>
-      </div>
-      <div class="card">
-        <h3>Skills</h3>
-        <div class="kv">
-          <span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Lua (Roblox)</span>
-          <span class="tag">C++</span><span class="tag">Arduino</span><span class="tag">Raspberry Pi</span>
-          <span class="tag">Signal Processing</span><span class="tag">Machine Learning</span>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img id="profile-pic" src="assets/images/LowHuiYeenProfile.jpg" alt="Low Hui Yeen">
+      <div>
+        <h1>Low Hui Yeen</h1>
+        <p>Master’s by Research (Electrical Engineering), UTM • BME (Hons) • STEM & Coding Tutor</p>
+        <div class="badges">
+          <span class="badge">UTM Faculty of Electrical Engineering</span>
+          <span class="badge">Genius Code Plus — Tutor</span>
+          <span class="badge">Python • Roblox • Minecraft Education</span>
         </div>
-        <a class="cta" href="skills.html" style="margin-top:12px">All skills →</a>
+        <button id="toggle-pic">Toggle Photo</button>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Quick Links</h2>
-    <div class="kv">
-      <a class="tag" href="about.html">About</a>
-      <a class="tag" href="education.html">Education</a>
-      <a class="tag" href="experience.html">Experience</a>
-      <a class="tag" href="skills.html">Skills</a>
-      <a class="tag" href="certifications.html">Certifications</a>
-      <a class="tag" href="contact.html">Contact</a>
-    </div>
-  </section>
-</main>
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <section>
+      <h2>Overview</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>Bachelor of Biomedical Engineering (Hons)</strong><br>Universiti Teknologi Malaysia (UTM)<br>CGPA 3.80 / 4.00</p>
+          <p><strong>Master by Research — Electrical Engineering</strong><br>UTM Faculty of Electrical Engineering • Present</p>
+          <a class="cta" href="education.html">View details →</a>
+        </div>
 
-  <footer id="site-footer"></footer>
+        <div class="card">
+          <h3>Experience</h3>
+          <p><strong>Tutor (STEM & Coding)</strong> — Genius Code Plus<br>Teaching Python, Roblox Studio, Minecraft Education.</p>
+          <a class="cta" href="experience.html">See experience →</a>
+        </div>
+
+        <div class="card">
+          <h3>Skills</h3>
+          <div class="kv">
+            <span class="tag">Python</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Lua</span>
+            <span class="tag">C++</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Raspberry Pi</span>
+          </div>
+          <a class="cta" href="skills.html" style="margin-top:12px">All skills →</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Quick Links</h2>
+      <div class="kv">
+        <a class="tag" href="about.html">About</a>
+        <a class="tag" href="education.html">Education</a>
+        <a class="tag" href="experience.html">Experience</a>
+        <a class="tag" href="skills.html">Skills</a>
+        <a class="tag" href="certifications.html">Certifications</a>
+        <a class="tag" href="contact.html">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer placeholder (auto-loaded from footer.html) -->
+  <footer id="site-footer" href></footer>
+
+  <!-- Load header/footer + main scripts -->
   <script src="assets/js/include.js"></script>
-  <script src="assets/js/dynamic.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('toggle-pic');
-      const pic = document.getElementById('profile-pic');
-      if (!btn || !pic) return;
-
-      const original = 'assets/images/LowHuiYeenProfile.jpg';
-      const alt = 'assets/images/LowHuiYeenAlt.jpg';
-      let showingAlt = false;
-
-      btn.addEventListener('click', () => {
-        pic.classList.add('fade-out');
-        setTimeout(() => {
-          pic.src = showingAlt ? original : alt;
-          showingAlt = !showingAlt;
-        }, 200);
-        pic.onload = () => {
-          pic.classList.remove('fade-out');
-          pic.classList.add('fade-in');
-          setTimeout(() => pic.classList.remove('fade-in'), 200);
-        };
-      });
-    });
-  </script>
-  
-
-</script>
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    menuToggle.textContent = navLinks.classList.contains('open') ? '✖' : '☰';
-  });
-</script>
-
 </body>
 </html>

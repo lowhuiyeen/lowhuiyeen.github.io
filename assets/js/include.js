@@ -1,18 +1,18 @@
-// Reusable partial loader
-async function includeHTML(selector, file) {
-  const el = document.querySelector(selector);
-  if (!el) return;
-  try {
-    const res = await fetch(file);
-    if (!res.ok) throw new Error(res.status);
-    el.innerHTML = await res.text();
-  } catch (e) {
-    el.innerHTML = `<div class="small" style="color:#c0392b">Failed to load: ${file}</div>`;
-  }
-}
+// Simple HTML include loader
+document.addEventListener("DOMContentLoaded", () => {
+  // Load header
+  fetch("/partials/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+      // after header is loaded, run main.js to activate nav features
+      const script = document.createElement("script");
+      script.src = "assets/js/main.js";
+      document.body.appendChild(script);
+    });
 
-document.addEventListener('DOMContentLoaded', () => {
-  includeHTML('#site-header', 'partials/header.html');
-  includeHTML('#site-footer', 'partials/footer.html');
-  includeHTML('#contact-info', 'partials/contact-info.html');
+  // Load footer
+  fetch("/partials/footer.html")
+    .then(res => res.text())
+    .then(html => (document.getElementById("site-footer").innerHTML = html));
 });
