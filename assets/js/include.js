@@ -10,9 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
       script.src = "assets/js/main.js";
       document.body.appendChild(script);
     });
+    // Load contact
+  fetch("/partials/contact-info.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("site-contact").innerHTML = html;
+
+    });
 
   // Load footer
   fetch("/partials/footer.html")
     .then(res => res.text())
     .then(html => (document.getElementById("site-footer").innerHTML = html));
 });
+
