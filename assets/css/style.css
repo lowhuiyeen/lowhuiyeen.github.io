@@ -33,12 +33,24 @@ nav{
   border-bottom:1px solid #e9eef5;
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 28px}
-.brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--primary);font-size:18px}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.brand:hover {
+  color: var(--accent);
+}
 .brand-logo{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid #eaeff6}
 .nav-links{display:flex;gap:16px;flex-wrap:wrap}
 .nav-links a{position:relative;color:var(--muted);font-weight:600;padding:6px 12px;border-radius:8px;transition:.25s}
 .nav-links a:hover{color:var(--primary);background:rgba(52,152,219,.1)}
-.nav-links a.active{background:var(--accent);color:#fff;box-shadow:0 3px 8px rgba(52,152,219,.25)}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width .3s}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
 
