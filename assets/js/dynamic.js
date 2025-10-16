@@ -18,3 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.container').appendChild(note);
   }
 });
+
+// --- Profile Picture Toggle Feature ---
+document.addEventListener("DOMContentLoaded", () => {
+  const img = document.getElementById("profile-pic");
+  const btn = document.getElementById("toggle-pic");
+  if (!img || !btn) return;
+
+  const original = "assets/images/LowHuiYeenProfile.jpg";
+  const alternate = "assets/images/LowHuiYeenAlt.jpg";
+  let showingOriginal = true;
+
+  btn.addEventListener("click", () => {
+    showingOriginal = !showingOriginal;
+    img.src = showingOriginal ? original : alternate;
+    btn.textContent = showingOriginal ? "🔄 Show Alternate Image" : "🔙 Back to Original";
+  });
+});
