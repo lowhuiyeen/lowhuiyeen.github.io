@@ -12,7 +12,12 @@
   
 <section class="hero">
   <div class="hero-inner">
-    <img src="assets/images/LowHuiYeenProfile.jpg" alt="Low Hui Yeen">
+  <img
+    id="profile-pic"
+    src="assets/images/LowHuiYeenProfile.jpg"
+    data-alt="assets/images/LowHuiYeenAlt.jpg"
+    alt="Low Hui Yeen"
+  />
     <div>
       <h1>Low Hui Yeen</h1>
       <p>Master's by Research (Electrical Engineering), UTM • BME (Hons) CGPA 3.80 • STEM & Coding Tutor</p>
@@ -70,16 +75,26 @@
   <footer id="site-footer"></footer>
   <script src="assets/js/include.js"></script>
   <script src="assets/js/dynamic.js"></script>
-</body>
-</html>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('toggle-pic');
+    const pic = document.getElementById('profile-pic');
+    if (!btn || !pic) return;
 
-<script>
-  const btn = document.getElementById('toggle-pic');
-  const pic = document.getElementById('profile-pic');
-  let alt = false;
+    const originalSrc = pic.getAttribute('src');
+    const altSrc = pic.dataset.alt || 'assets/images/LowHuiYeenAlt.jpg';
+    let showingAlt = false;
 
-  btn.addEventListener('click', () => {
-    pic.src = alt ? 'LowHuiYeen.jpg' : 'LowHuiYeenAlt.jpg';
-    alt = !alt;
+    btn.addEventListener('click', () => {
+      pic.style.opacity = 0;
+      setTimeout(() => {
+        pic.src = showingAlt ? originalSrc : altSrc;
+        showingAlt = !showingAlt;
+      }, 150);
+      pic.onload = () => (pic.style.opacity = 1);
+    });
   });
 </script>
+
+</body>
+</html>
