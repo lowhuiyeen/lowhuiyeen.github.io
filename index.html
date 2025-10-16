@@ -76,24 +76,30 @@
   <script src="assets/js/include.js"></script>
   <script src="assets/js/dynamic.js"></script>
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('toggle-pic');
-    const pic = document.getElementById('profile-pic');
-    if (!btn || !pic) return;
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('toggle-pic');
+      const pic = document.getElementById('profile-pic');
+      if (!btn || !pic) return;
 
-    const originalSrc = pic.getAttribute('src');
-    const altSrc = pic.dataset.alt || 'assets/images/LowHuiYeenAlt.jpg';
-    let showingAlt = false;
+      const original = 'assets/images/LowHuiYeenProfile.jpg';
+      const alt = 'assets/images/LowHuiYeenAlt.jpg';
+      let showingAlt = false;
 
-    btn.addEventListener('click', () => {
-      pic.style.opacity = 0;
-      setTimeout(() => {
-        pic.src = showingAlt ? originalSrc : altSrc;
-        showingAlt = !showingAlt;
-      }, 150);
-      pic.onload = () => (pic.style.opacity = 1);
+      btn.addEventListener('click', () => {
+        pic.classList.add('fade-out');
+        setTimeout(() => {
+          pic.src = showingAlt ? original : alt;
+          showingAlt = !showingAlt;
+        }, 200);
+        pic.onload = () => {
+          pic.classList.remove('fade-out');
+          pic.classList.add('fade-in');
+          setTimeout(() => pic.classList.remove('fade-in'), 200);
+        };
+      });
     });
-  });
+  </script>
+
 </script>
 
 </body>
