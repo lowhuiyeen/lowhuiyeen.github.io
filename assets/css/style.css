@@ -349,3 +349,45 @@ footer {
    ========================================= */
 ::selection { background: #b8e994; color: #0b1b2b; }
 ::-moz-selection { background: #b8e994; color: #0b1b2b; }
+
+/* ---------- AUTO FLIP PHOTO ---------- */
+.photo-flip {
+  width: 120px;
+  height: 120px;
+  perspective: 800px;
+  flex-shrink: 0;
+}
+
+.photo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.photo-inner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+}
+
+/* Back image flips 180° */
+.photo-inner .back {
+  transform: rotateY(180deg);
+}
+
+/* When flipped */
+.photo-flip.flip .photo-inner {
+  transform: rotateY(180deg);
+}
+
+/* Optional: pause flip when hovered */
+.photo-flip:hover .photo-inner {
+  transition: none;
+}

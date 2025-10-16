@@ -17,18 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.text())
     .then(html => (document.getElementById("site-footer").innerHTML = html));
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const iconEl = document.getElementById("dynamic-favicon");
 
-  // Two sets of icons (default + alternate)
+  // Validate element
+  if (!iconEl) return;
+
+  // Define icon sets (relative paths)
   const iconSets = [
-    "favicon/favicon-96x96.png",
-    "favicon-alt/favicon-96x96.png"
+    "assets/icons/favicon/favicon-96x96.png",
+    "assets/icons/favicon-alt/favicon-96x96.png"
   ];
 
   let current = 0;
-  let interval;
+  let interval = null;
 
+  // Switch favicon
   function switchFavicon() {
     current = (current + 1) % iconSets.length;
     iconEl.href = iconSets[current];
@@ -36,26 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start animation
   function startFaviconAnimation() {
-    if (!interval) interval = setInterval(switchFavicon, 2000); // 2 seconds
+    if (!interval) interval = setInterval(switchFavicon, 2000);
   }
 
-  // Stop animation when tab is hidden (save CPU)
+  // Stop animation and reset
   function stopFaviconAnimation() {
     clearInterval(interval);
     interval = null;
-    iconEl.href = iconSets[0]; // reset to default
+    iconEl.href = iconSets[0];
   }
 
+  // Visibility handler (pause when tab hidden)
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) stopFaviconAnimation();
     else startFaviconAnimation();
   });
 
+  // Start on load
   startFaviconAnimation();
-});
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) startFaviconAnimation();
-  else stopFaviconAnimation();
 });
 
 
