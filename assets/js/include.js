@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.appendChild(script);
     });
     // Load contact
-  fetch("/partials/contact-info.html")
+  fetch("/partials/contact.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("site-contact").innerHTML = html;
