@@ -59,12 +59,12 @@ footer{border-top:1px solid #e9eef5;background:#fff;padding:24px;margin-top:36px
 .social a{display:inline-flex;align-items:center;gap:8px;margin-right:12px;color:var(--muted);font-weight:600}
 .social a:hover{color:var(--accent)}
 
-#toggle-pic {
-  background: var(--accent-2);
-  color: #fff;
-  border: none;
-  cursor: pointer;
+::selection {
+  background: #b8e994; /* matches your hero gradient */
+  color: #0b1b2b;      /* dark text */
 }
-#toggle-pic:hover {
-  opacity: 0.9;
+::-moz-selection {
+  background: #b8e994;
+  color: #0b1b2b;
 }
+
