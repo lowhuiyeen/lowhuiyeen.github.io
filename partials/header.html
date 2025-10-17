@@ -1,24 +1,54 @@
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/images/LowHuiYeenProfile.jpg" alt="Low Hui Yeen" class="brand-logo">
-      <span>Low Hui Yeen</span>
-    </div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
-    <div class="nav-links" id="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/education.html">Education</a>
-      <a href="/experience.html">Experience</a>
-      <a href="/skills.html">Skills</a>
-      <a href="/certifications.html">Certifications</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-  </div>
-</nav>
+<!-- =========================
+     HEADER — Low Hui Yeen
+     ========================= -->
 
-<!-- Animated favicon setup -->
-<link id="dynamic-favicon" rel="icon" type="image/x-icon" href="assets/icons/favicon/favicon.ico">
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Low Hui Yeen — Researcher & STEM Tutor">
+<title>Low Hui Yeen | Portfolio</title>
+
+<!-- =========================
+     FAVICON SETUP
+     ========================= -->
+
+<!-- ✅ Default favicon (static fallback for all browsers) -->
+<link rel="icon" href="assets/icons/favicon/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="assets/icons/favicon/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="assets/icons/favicon/apple-touch-icon.png">
 <link rel="manifest" href="assets/icons/favicon/site.webmanifest">
 
+<!-- ✅ Animated favicon (JS will swap this dynamically) -->
+<link id="dynamic-favicon" rel="icon" type="image/x-icon" href="assets/icons/favicon/favicon.ico">
+
+<!-- =========================
+     STYLES
+     ========================= -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- =========================
+     NAVBAR
+     ========================= -->
+<nav>
+  <div class="nav-inner">
+    <!-- Brand — clickable link to homepage -->
+    <a href="index.html" class="brand">
+      <img src="assets/images/LowHuiYeenProfile.jpg" alt="Low Hui Yeen" class="brand-logo">
+      <span>Low Hui Yeen</span>
+    </a>
+
+    <!-- Hamburger for mobile -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <!-- Navigation links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
