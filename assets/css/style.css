@@ -71,28 +71,33 @@ nav {
 }
 
 /* Navigation Links */
+nav {
+  border-bottom: 1px solid #e9eef5;
+  padding-bottom: 2px;
+}
+
 .nav-links {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
 
+/* Default link style */
 .nav-links a {
   position: relative;
   color: var(--muted);
   font-weight: 600;
   padding: 6px 12px;
-  border-radius: 8px;
-  transition: color 0.25s ease, background 0.25s ease;
+  transition: color 0.25s ease;
+  text-decoration: none;
 }
 
-/* Hover effect */
+/* Hover effect — slight color change */
 .nav-links a:hover {
   color: var(--primary);
-  background: rgba(52, 152, 219, 0.08);
 }
 
-/* Underline animation */
+/* Underline animation (hover + active) */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -104,23 +109,22 @@ nav {
   transition: width 0.3s ease;
 }
 
-/* When hovering */
+/* Animate underline on hover */
 .nav-links a:hover::after {
   width: 100%;
 }
 
-/* Active page link — underline only, no background */
+/* Active page — underline stays visible */
 .nav-links a.active {
   color: var(--primary);
-  background: none;        /* ✨ Remove fill color */
-  box-shadow: none;        /* ✨ Remove glow */
+  background: none;     /* removes background */
+  box-shadow: none;     /* removes glow */
 }
 
-/* Show full underline when active */
+/* Keep underline full width on active link */
 .nav-links a.active::after {
   width: 100%;
 }
-
 
 
 
