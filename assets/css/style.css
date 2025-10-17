@@ -76,18 +76,23 @@ nav {
   gap: 16px;
   flex-wrap: wrap;
 }
+
 .nav-links a {
   position: relative;
   color: var(--muted);
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 8px;
-  transition: 0.25s;
+  transition: color 0.25s ease, background 0.25s ease;
 }
+
+/* Hover effect */
 .nav-links a:hover {
   color: var(--primary);
-  background: rgba(52, 152, 219, 0.1);
+  background: rgba(52, 152, 219, 0.08);
 }
+
+/* Underline animation */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -96,17 +101,27 @@ nav {
   width: 0;
   height: 2px;
   background: var(--accent);
-  transition: width 0.3s;
+  transition: width 0.3s ease;
 }
-.nav-links a:hover::after,
+
+/* When hovering */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active page link — underline only, no background */
 .nav-links a.active {
-  background: var(--accent);
-  color: #fff;
-  box-shadow: 0 3px 8px rgba(52, 152, 219, 0.25);
+  color: var(--primary);
+  background: none;        /* ✨ Remove fill color */
+  box-shadow: none;        /* ✨ Remove glow */
 }
+
+/* Show full underline when active */
 .nav-links a.active::after {
   width: 100%;
 }
+
+
 
 
 /* ---------- HAMBURGER MENU ---------- */
