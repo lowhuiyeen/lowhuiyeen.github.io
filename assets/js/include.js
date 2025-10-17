@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ✅ Use relative paths
   const icons = [
-    "assets/icons/favicon/favicon-96x96.png",
-    "assets/icons/favicon-alt/favicon-96x96.png"
+    "/assets/icons/favicon/favicon-96x96.png",
+    "/assets/icons/favicon-alt/favicon-96x96.png"
   ];
 
   let current = 0;
