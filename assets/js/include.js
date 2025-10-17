@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const iconEl = document.getElementById("dynamic-favicon");
   if (!iconEl) return;
 
-  // Relative paths (works on GitHub Pages)
-  const iconSets = [
+  // ✅ Use relative paths
+  const icons = [
     "assets/icons/favicon/favicon-96x96.png",
     "assets/icons/favicon-alt/favicon-96x96.png"
   ];
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let interval;
 
   function switchFavicon() {
-    current = (current + 1) % iconSets.length;
-    iconEl.href = iconSets[current];
+    current = (current + 1) % icons.length;
+    iconEl.href = icons[current];
   }
 
   function startAnimation() {
@@ -43,10 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function stopAnimation() {
     clearInterval(interval);
     interval = null;
-    iconEl.href = iconSets[0];
+    iconEl.href = icons[0];
   }
 
-  // Pause when tab hidden
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) stopAnimation();
     else startAnimation();
@@ -54,4 +53,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startAnimation();
 });
+
 
