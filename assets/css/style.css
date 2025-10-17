@@ -356,25 +356,28 @@ footer {
   height: 120px;
   perspective: 800px;
   flex-shrink: 0;
+  position: relative;
 }
 
 .photo-inner {
-  position: relative;
   width: 100%;
   height: 100%;
+  position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s ease;
+  transition: transform 0.8s ease-in-out;
 }
 
 .photo-inner img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  backface-visibility: hidden;
   border: 4px solid rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow);
+  backface-visibility: hidden;
 }
 
 /* Back image flips 180° */
@@ -382,12 +385,13 @@ footer {
   transform: rotateY(180deg);
 }
 
-/* When flipped */
+/* Flip animation */
 .photo-flip.flip .photo-inner {
   transform: rotateY(180deg);
 }
 
-/* Optional: pause flip when hovered */
+/* Optional: Pause flip on hover */
 .photo-flip:hover .photo-inner {
   transition: none;
 }
+

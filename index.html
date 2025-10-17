@@ -18,9 +18,10 @@
       <div class="photo-flip">
         <div class="photo-inner">
           <img src="assets/images/LowHuiYeenProfile.jpg" alt="Low Hui Yeen" class="front">
-          <img src="assets/images/LowHuiYeenAlt.jpg" alt="Low Hui Yeen Alt" class="back">
+          <img src="assets/images/LowHuiYeenAlt.jpg" alt="Low Hui Yeen (Alt)" class="back">
         </div>
-      </div>
+    </div>
+
       <div>
         <h1>Low Hui Yeen</h1>
         <p>Master’s by Research (Electrical Engineering), UTM • BME (Hons) • STEM & Coding Tutor</p>
@@ -74,18 +75,19 @@
 
   <!-- Load header/footer + main scripts -->
   <script src="assets/js/include.js"></script>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const flip = document.querySelector(".photo-flip");
-      if (!flip) return;
 
-      // Flip every 6 seconds
-      setInterval(() => {
-        flip.classList.toggle("flip");
-      }, 6000);
-    });
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const flip = document.querySelector(".photo-flip");
+    if (!flip) return;
+
+    // Auto flip every 6 seconds
+    setInterval(() => {
+      flip.classList.toggle("flip");
+    }, 6000);
+  });
   </script>
+
 
 </body>
 </html>
