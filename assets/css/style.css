@@ -136,75 +136,129 @@ nav {
 .menu-toggle:hover { color: var(--color-accent); }
 
 /* =========================================
-   🌈 HERO SECTION
+   🌟 HERO — ATAS EDITION
    ========================================= */
 .hero {
-  background: linear-gradient(120deg, var(--color-accent) 0%, var(--color-primary) 100%);
-  padding: 48px 24px;
-  color: var(--color-text);
-}
-.hero-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.hero img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  flex-shrink: 0;
-  transition: opacity 0.4s;
-}
-.hero h1 { margin: 0 0 6px 0; font-size: 32px; }
-.hero p { margin: 6px 0; color: var(--color-text); }
-.badges {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-.badge {
-  background: var(--brand-gold);
-  border: 1px solid #d7b56433;
+  background: radial-gradient(
+      circle at 35% 30%,
+      rgba(255, 255, 255, 0.45) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      var(--brand-peach) 0%,
+      var(--brand-gold) 45%,
+      var(--brand-yellow) 100%
+    );
+  padding: 90px 24px 70px;
   color: var(--brand-black);
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-/* ---------- Toggle Button ---------- */
-#toggle-pic {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
-  color: #fff;
+/* Subtle glossy overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 60%
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 {
+  color: var(--brand-black);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: rgba(19, 18, 17, 0.85);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
+
+/* Premium badges */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.badge {
+  background: var(--brand-gold);
+  color: var(--brand-black);
   border: none;
-  cursor: pointer;
-  padding: 8px 18px;
   border-radius: 999px;
+  padding: 10px 18px;
   font-weight: 600;
-  font-size: 14px;
-  transition: 0.25s;
-  box-shadow: 0 4px 10px rgba(250, 180, 0, 0.3);
-  margin-top: 14px;
+  font-size: 15px;
+  box-shadow: 0 6px 12px rgba(19, 18, 17, 0.12);
+  transition: all 0.3s ease;
 }
-#toggle-pic::before { content: "📸"; font-size: 15px; }
-#toggle-pic:hover {
+.badge:hover {
+  background: var(--brand-yellow);
   transform: translateY(-2px);
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  box-shadow: 0 6px 14px rgba(24, 88, 183, 0.35);
+  box-shadow: 0 10px 20px rgba(19, 18, 17, 0.15);
 }
-#toggle-pic:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(250, 180, 0, 0.25);
+
+/* Light fade at bottom */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #fff);
+  pointer-events: none;
+}
+
+/* =========================================
+   📸 PHOTO TOGGLE BUTTON
+   ========================================= */ 
+
+#toggle-pic {
+  background: var(--brand-blue);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(24, 88, 183, 0.3);
+}
+#toggle-pic:hover {
+  background: var(--brand-yellow);
+  color: var(--brand-black);
+  box-shadow: 0 6px 12px rgba(250, 180, 0, 0.35);
 }
 
 /* =========================================
