@@ -55,3 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
   startAnimation();
 });
 
+// Highlight active nav link based on current page
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const links = document.querySelectorAll(".nav-links a");
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});

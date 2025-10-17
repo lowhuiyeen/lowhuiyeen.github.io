@@ -99,9 +99,15 @@ nav {
   transition: width 0.3s;
 }
 .nav-links a:hover::after,
+.nav-links a.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(52, 152, 219, 0.25);
+}
 .nav-links a.active::after {
   width: 100%;
 }
+
 
 /* ---------- HAMBURGER MENU ---------- */
 .menu-toggle {
