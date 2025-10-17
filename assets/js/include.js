@@ -17,24 +17,24 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.text())
     .then(html => (document.getElementById("site-footer").innerHTML = html));
 });
-
 document.addEventListener("DOMContentLoaded", () => {
   const iconEl = document.getElementById("dynamic-favicon");
   if (!iconEl) return;
 
-  // ✅ Use relative paths
+  // Use your actual .ico paths (✅ confirmed to work)
   const icons = [
-    "/assets/icons/favicon/favicon-96x96.png",
-    "/assets/icons/favicon-alt/favicon-96x96.png"
+    "assets/icons/favicon/favicon.ico",      // Default
+    "assets/icons/favicon-alt/favicon.ico"   // Alternate
   ];
 
   let current = 0;
   let interval;
 
   function switchFavicon() {
+    iconEl.setAttribute('href', icons[current]);
     current = (current + 1) % icons.length;
-    iconEl.href = icons[current];
   }
+
 
   function startAnimation() {
     if (!interval) interval = setInterval(switchFavicon, 2000);
@@ -43,9 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function stopAnimation() {
     clearInterval(interval);
     interval = null;
-    iconEl.href = icons[0];
+    iconEl.href = icons[0]; // reset to default
   }
 
+  // Pause animation when tab is hidden to save CPU
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) stopAnimation();
     else startAnimation();
@@ -53,5 +54,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startAnimation();
 });
-
-
