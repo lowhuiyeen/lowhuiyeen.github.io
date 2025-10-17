@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brand Colors • Live Tokens</title>
+  <link rel="stylesheet" href="/assets/css/brand-colors.css">
+  <style>
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+    header { padding:32px 24px; }
+    main { padding:24px; }
+  </style>
+</head>
+<body class="bg-app">
+  <header>
+    <h1 style="margin:0 0 6px 0;">Brand Colors</h1>
+    <div class="small">Drop <code>brand-colors.css</code> into your site and use <code>var(--brand-*)</code> or the utility classes.</div>
+  </header>
+  <main>
+    <section class="grid">
+      <div class="card surface">
+        <h3>Palette</h3>
+        <div class="grid">
+          <div>
+            <div class="swatch bg-yellow"></div>
+            <div class="small">--brand-yellow<br>#FAB400</div>
+          </div>
+          <div>
+            <div class="swatch bg-blue"></div>
+            <div class="small">--brand-blue<br>#1858B7</div>
+          </div>
+          <div>
+            <div class="swatch bg-brown"></div>
+            <div class="small">--brand-brown<br>#786132</div>
+          </div>
+          <div>
+            <div class="swatch bg-gold"></div>
+            <div class="small">--brand-gold<br>#D7B564</div>
+          </div>
+          <div>
+            <div class="swatch bg-peach"></div>
+            <div class="small">--brand-peach<br>#FCD395</div>
+          </div>
+          <div>
+            <div class="swatch bg-black"></div>
+            <div class="small">--brand-black<br>#131211</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card surface">
+        <h3>Buttons (Semantic)</h3>
+        <p>
+          <a class="btn btn-primary">Primary</a>
+          <a class="btn btn-accent">Accent</a>
+          <span class="badge badge-muted">Muted</span>
+        </p>
+        <p class="small">Uses semantic tokens like <code>--color-primary</code>.</p>
+      </div>
+
+      <div class="card surface">
+        <h3>Dark Mode</h3>
+        <p class="small">Toggle dark mode by adding <code>.dark</code> to the <code>&lt;body&gt;</code>.</p>
+        <div style="padding:16px; border-radius:12px;" class="dark bg-app">
+          <a class="btn btn-primary">Primary</a>
+          <a class="btn btn-accent">Accent</a>
+          <span class="badge badge-muted">Muted</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
